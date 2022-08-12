@@ -1,7 +1,9 @@
 <template>
-  <div>
-    <img alt="Hoser logo" src="./assets/logo.png">
-    <h1>Hoser</h1>
+  <div style="margin: 5rem">
+    <div class="hero">
+      <img alt="Hoser logo" src="./assets/logo.png">
+      <h1>Hoser</h1>
+    </div>
     <HoserMain/>
   </div>
 </template>
@@ -23,7 +25,17 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #90330;
   margin-top: 60px;
+}
+h1 {
+  margin: 1rem;
+}
+.hero {
+  text-align: center;
+}
+body {
+  background-color: #494847;
+  color: white;
 }
 </style>
