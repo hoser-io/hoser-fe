@@ -1,24 +1,35 @@
-# hoser-fe
+# Hoser Frontend
 
-## Project setup
+## Getting Started
+Install the frontend for development
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+Compile and run development server with hot-reloads
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
+Lint and fix files
 ```
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Production
+For production, planning to run as containerized 12-Factor app. 
+
+Compile and minify for production outside of container using:
+```
+npm run build
+```
+
+Or, build production image
+```
+docker build -t hoser-io/hoser-fe .
+```
+
+Run production container:
+```
+docker run -p 8080:80 --rm hoser-io/hoser-fe
+```
