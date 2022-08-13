@@ -1,5 +1,5 @@
 <template>
-  <div style="margin: 5rem">
+  <div style="margin: 2rem">
     <div class="hero">
       <img alt="Hoser logo" src="./assets/logo.png">
       <h1>Hoser</h1>
@@ -28,9 +28,7 @@ export default {
   color: #90330;
   margin-top: 60px;
 }
-h1 {
-  margin: 1rem;
-}
+
 .hero {
   text-align: center;
 }

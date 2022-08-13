@@ -1,29 +1,25 @@
 <template>
-  <div>
-    <div class="fromsource">
-      <b-form-select v-model="fr_selected" :options="options"></b-form-select>
-      <b-button v-b-tooltip.hover title="Test connection" variant="primary">Test</b-button>
-    </div>
-
-    <div class="fromsource">
-      <b-form-select v-model="to_selected" :options="options"></b-form-select>
-      <b-button v-b-tooltip.hover title="Test connection" variant="primary">Test</b-button>
-    </div>
-
-    <div class="fromsource">
-      <h1>Your cost to move: $3.75</h1>
-      <b-button variant="success">Move my data, Hoser!</b-button>
-      <b-progress :value="value" :max="max" show-progress animated></b-progress>
-    </div>
-  </div>
+  <b-container>
+    <b-row class="m-5">
+      <b-col>
+        <b-form-select class="m-2" v-model="fr_selected" :options="options"></b-form-select>
+        <b-button class="m-2" v-b-tooltip.hover title="Test connection" variant="primary">Test</b-button>
+      </b-col>
+      <b-col class="justify-content-md-center">
+        <b-button @click="randomValue" class="m-2" variant="success">Move my data, Hoser!</b-button>
+      </b-col>
+      <b-col>
+        <b-form-select class="m-2" v-model="to_selected" :options="options"></b-form-select>
+        <b-button class="m-2" v-b-tooltip.hover title="Test connection" variant="primary">Test</b-button>
+      </b-col>
+    </b-row>
+    <b-progress class="mx-md-n5" :value="value" :max="max" show-progress animated></b-progress>
+  </b-container>
 </template>
 
 <script>
 export default {
   name: 'HoserMain',
-  props: {
-    msg: String
-  },
     data() {
       return {
         fr_selected: null,
@@ -36,7 +32,7 @@ export default {
           {value: 'Vultr', text: 'Vultr Block Storage', disabled: true},
           {value: 'Linode', text: 'Linode Block Storage', disabled: true}
         ],
-        value: 45,
+        value: 0,
         max: 100
       }
   },
@@ -47,10 +43,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.fromsource {
-  padding: 1rem;
-  margine: 1rem
-}
-</style>

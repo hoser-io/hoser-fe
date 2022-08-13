@@ -1,7 +1,7 @@
 # Hoser Frontend
 
 ## Getting Started
-Install the frontend for development
+Install the frontend for development (only tested with npm 6.14.8)
 ```
 npm install
 ```
